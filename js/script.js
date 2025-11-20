@@ -1,49 +1,85 @@
-document.addEventListener("DOMContentLoaded", function() {
-    // Limpa dados antigos
+// ============================
+// SCRIPT ÚNICO DO PROJETO
+// ============================
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    // ============================================================
+    // 1. LIMPEZA DE DADOS ANTIGOS (APENAS DO PROJETO ANTERIOR)
+    // ============================================================
     localStorage.removeItem("ultimoContato");
-    sessionStorage.clear(); // se quiser limpar sessões antigas
-    // ============================
-    // MENU HAMBÚRGUER
-    // ============================
+    sessionStorage.clear();
+
+
+    // ============================================================
+    // 2. MENU HAMBÚRGUER + OVERLAY
+    // ============================================================
     const hamburger = document.getElementById("hamburger");
     const menu = document.getElementById("menu");
 
     if (hamburger && menu) {
-        hamburger.addEventListener("click", function() {
-            menu.classList.toggle("show");
+
+        // cria overlay dinamicamente para manter HTML limpo
+        let overlay = document.querySelector(".menu-overlay");
+
+        if (!overlay) {
+            overlay = document.createElement("div");
+            overlay.className = "menu-overlay";
+            document.body.appendChild(overlay);
+        }
+
+        // abre/fecha menu
+        hamburger.addEventListener("click", () => {
             hamburger.classList.toggle("active");
+            menu.classList.toggle("show");
+            overlay.classList.toggle("show");
+
+            hamburger.setAttribute(
+                "aria-expanded",
+                hamburger.classList.contains("active")
+            );
+        });
+
+        // fecha clicando fora
+        overlay.addEventListener("click", (e) => {
+            if (e.target === overlay) {
+                hamburger.classList.remove("active");
+                menu.classList.remove("show");
+                overlay.classList.remove("show");
+
+                hamburger.setAttribute("aria-expanded", "false");
+            }
         });
     }
 
-    // ============================
-    // FORMULÁRIO DE CONTATO
-    // ============================
-    const form = document.querySelector("form");
+
+    // ============================================================
+    // 3. FORMULÁRIO DE CONTATO (SIMULAÇÃO — NÃO SALVA NADA)
+    // ============================================================
+    const form = document.getElementById("formContato");
 
     if (form) {
-        form.addEventListener("submit", function(event) {
+        const status = document.createElement("p");
+        status.id = "msgStatus";
+        status.style.marginTop = "10px";
+        form.appendChild(status);
 
-            if (!form.checkValidity()) {
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            const nome = form.txtNome.value.trim();
+            const email = form.txtEmail.value.trim();
+            const mensagem = form.txtMensagem.value.trim();
+
+            if (!nome || !email || !mensagem) {
+                status.textContent = "Preencha todos os campos obrigatórios.";
+                status.style.color = "red";
                 return;
             }
 
-            event.preventDefault();
-
-            // Captura dos dados
-            let dados = {
-                nome: document.getElementById("txtNome").value,
-                email: document.getElementById("txtEmail").value,
-                telefone: document.getElementById("telefone").value,
-                assunto: document.getElementById("txtAssunto").value,
-                mensagem: document.getElementById("txtMensagem").value,
-                dataEnvio: new Date().toLocaleString()
-            };
-
-            // Salva privado (não aparece na página)
-            localStorage.setItem("ultimoContato", JSON.stringify(dados));
-            sessionStorage.setItem("mensagemTemporaria", dados.mensagem);
-
-            alert("Mensagem enviada com sucesso!");
+            // Nenhum dado é armazenado.
+            status.textContent = "Mensagem enviada! (simulação — nada foi salvo)";
+            status.style.color = "#0a7a4a";
 
             form.reset();
         });
