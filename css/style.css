@@ -1,0 +1,380 @@
+/* ===== RESET GLOBAL ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* ===== NAVBAR / HEADER ===== */
+header {
+    width: 100%;
+    background: linear-gradient(90deg, rgba(0,72,87,1) 0%, rgba(87,199,133,1) 50%, rgba(237,221,83,1) 100%);
+    padding: 15px 20px;
+    color: white;
+    position: relative;   /* FIX: garante que o menu mobile apareça sob o header */
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* menu - padrão escondido (mobile controla exibição) */
+.menu {
+    list-style: none;
+    display: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* itens de menu (mobile) */
+.menu li {
+    margin: 10px 0;
+}
+
+.menu li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+
+.menu li a:hover,
+.menu li a.active {
+    color: #ffeb3b;
+}
+
+/* ===== HAMBURGER ===== */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    padding: 4px;
+}
+
+.hamburger span {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -6px);
+}
+
+/* ===== MENU.APARIÇÃO controlada pelo JS com .show ===== */
+.menu.show {
+    display: flex;
+}
+
+/* ===== HERO ===== */
+.hero {
+    text-align: center;
+    padding: 60px 30px;
+    background-color: #e9ecef;
+}
+
+.hero h1 {
+    color: #007BFF;
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* ===== BOTÃO PADRÃO ===== */
+.btn {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* ===== CARDS ===== */
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 250px;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* ===== FORMULÁRIOS ===== */
+form {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    max-width: 700px;
+    margin: 20px auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 6px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 2px solid #ddd;
+    font-size: 15px;
+}
+
+input[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    font-size: 16px;
+    padding: 12px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* ===== FAQ ===== */
+.faq-item {
+    background-color: #f9f9f9;
+    padding: 18px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+}
+
+.faq-item h2 {
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+
+/* ===== TEAM ===== */
+.team {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 35px;
+}
+
+.member {
+    background-color: white;
+    padding: 20px;
+    width: 240px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.member img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;
+    color: white;
+    background: linear-gradient(90deg, rgba(237,221,83,1) 0%, rgba(87,199,133,1) 50%, rgba(0,72,87,1) 100%);
+    box-sizing: border-box;
+}
+
+/* ===== PARTNERSHIP ===== */
+.partnership {
+    margin-top: 20px;
+    text-align: center;
+    color: #004857;
+    font-size: 16px;
+}
+
+/* =========================
+   RESPONSIVIDADE
+   ========================= */
+
+/* ===== Mobile até 600px ===== */
+@media (max-width: 600px) {
+    header { padding: 12px 14px; }
+    .hamburger { display: flex; }
+    .menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background: rgba(0, 72, 87, 0.98);
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 200px;
+        border-radius: 8px 0 0 8px;
+        padding: 20px 0;
+        margin: 0;
+        box-shadow: -2px 2px 10px rgba(0,0,0,0.3);
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: all 0.25s ease;
+        z-index: 1000;
+    }
+    .menu.show {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .hero { padding: 60px 20px; }
+    .hero h1 { font-size: 22px; }
+    .member { width: 90%; padding: 15px; }
+    .cards { flex-direction: column; gap: 20px; align-items: center; }
+}
+
+/* ===== Tablets 601–768px ===== */
+@media (min-width: 601px) and (max-width: 768px) {
+    header { padding: 18px 24px; }
+    .hamburger { display: flex; }
+    .menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background: rgba(0, 72, 87, 0.98);
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 250px;
+        border-radius: 10px 0 0 10px;
+        padding: 25px 0;
+        margin: 0;
+        box-shadow: -2px 2px 12px rgba(0,0,0,0.2);
+        z-index: 1000;
+    }
+    .menu.show {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .hero { padding: 90px 24px; }
+    .hero h1 { font-size: 28px; }
+    .cards { gap: 25px; }
+    .member { width: 260px; }
+    form { max-width: 750px; padding: 30px; }
+}
+
+/* ===== Desktop (>= 769px) ===== */
+@media (min-width: 769px) {
+    header { padding: 25px 50px; }
+    .hamburger { display: none !important; }
+
+    .menu {
+        display: flex !important;
+        flex-direction: row;
+        gap: 20px;
+        align-items: center;
+        position: static;
+        background: transparent;
+        box-shadow: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu li a {
+        color: white;
+        font-size: 18px;
+        padding: 8px;
+        text-decoration: none;
+    }
+
+    .menu li a:hover,
+    .menu li a.active {
+        color: #EDDD53;
+    }
+
+    .hero { padding: 120px 60px; }
+    .hero h1 { font-size: 36px; }
+    .cards { gap: 40px; }
+    .member { width: 280px; }
+    form { max-width: 900px; padding: 40px; }
+}
+
+/* ===== Large desktops 992px+ ===== */
+@media (min-width: 992px) {
+    header { padding: 30px 60px; }
+    .hero { padding: 140px 80px; }
+    .card { width: 280px; }
+    .member { width: 300px; padding: 25px; }
+    .cards { gap: 50px; }
+    form { max-width: 1000px; padding: 45px; }
+}
+
+/* ===== Extra large 1300px+ ===== */
+@media (min-width: 1300px) {
+    .destaques,
+    .about,
+    .team,
+    .faq,
+    .contact,
+    .roadmap-tech {
+        max-width: 1300px;
+        margin: 0 auto;
+    }
+
+    header { padding: 35px 80px; }
+    .hero { padding: 160px 100px; }
+    .hero h1 { font-size: 40px; }
+    .benefits { padding: 120px 60px; }
+    footer { padding: 30px 80px; }
+}
+
+/* ===== Acessibilidade ===== */
+a { outline: none; }
+a:focus { box-shadow: 0 0 0 3px rgba(0,123,255,0.2); border-radius: 4px; }
+button { font: inherit; }
+button:focus { box-shadow: 0 0 0 3px rgba(0,123,255,0.2); border-radius: 4px; }
