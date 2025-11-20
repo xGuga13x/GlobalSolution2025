@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sobre | Climax+</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="brand">
+        <img src="assets/logo.png" alt="Logo Climax+" width="180" height="180">
+      </a>
+
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="menu" id="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="integrantes.html">Integrantes</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="contato.html" class="active">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <h1>Contato</h1>
+      <p>Envie dúvidas ou sugestões.</p>
+    </section>
+
+    <section class="contact">
+      <form id="formContato" action="#" method="post">
+        <h2>Formulário de Contato</h2>
+        <label for="txtNome">Seu nome <span class="required">*</span></label>
+        <input type="text" id="txtNome" name="txtNome" required>
+
+        <label for="txtEmail">Seu e-mail <span class="required">*</span></label>
+        <input type="email" id="txtEmail" name="txtEmail" required>
+
+        <label for="telefone">Seu telefone</label>
+        <input type="tel" id="telefone" name="telefone">
+
+        <label for="txtAssunto">Assunto</label>
+        <input type="text" id="txtAssunto" name="txtAssunto">
+
+        <label for="txtMensagem">Mensagem <span class="required">*</span></label>
+        <textarea id="txtMensagem" name="txtMensagem" rows="4" required></textarea>
+
+        <input type="submit" value="Enviar">
+      </form>
+    </section>
+  </main>
+  <footer> ... </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
