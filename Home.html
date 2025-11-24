@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>WorkBalance+ — Plataforma Acadêmica</title>
+
+    <link rel="stylesheet" href="css/Home.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/responsividade.css" />
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <header>
+      <nav class="navbar">
+        <a href="index.html" class="marca">
+          <img
+            src="assets/Logo_principal.png"
+            alt="Logo WorkBalance+"
+            width="150"
+          />
+        </a>
+
+        <ul class="menu" id="menu">
+          <li><a href="Home.html" class="ativo">Início</a></li>
+          <li><a href="integrantes.html">Integrantes</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+
+        <div class="acoes">
+          <a class="login" href="Login.html" id="abrirLogin">Entrar</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero big-hero fade">
+        <div class="hero-texto">
+          <h1>Bem-estar corporativo impulsionado por dados</h1>
+          <p>
+            O WorkBalance+ é uma plataforma acadêmica desenvolvida para analisar
+            humor, produtividade e engajamento, oferecendo uma visão profunda
+            sobre o clima organizacional.
+          </p>
+          <a class="botao hero-btn" href="dashboard.html">Explorar Dashboard</a>
+        </div>
+      </section>
+
+      <!-- SOBRE A PLATAFORMA -->
+      <section class="sobre-plataforma aparecer">
+        <h2>O que é o WorkBalance+?</h2>
+        <p>
+          O WorkBalance+ é um projeto criado para estudar e compreender como o
+          humor e a produtividade se comportam dentro de equipes. A plataforma
+          avalia padrões, identifica mudanças e oferece relatórios estratégicos
+          que auxiliam em pesquisas e tomadas de decisão acadêmicas.
+        </p>
+
+        <div class="sobre-grade">
+          <div class="sobre-item aparecer delay1">
+            <h3>📊 Análises aprofundadas</h3>
+            <p>Indicadores como Mood Score e médias gerais.</p>
+          </div>
+
+          <div class="sobre-item aparecer delay2">
+            <h3>🧠 Inteligência aplicada</h3>
+            <p>Baseado em estudos sobre comportamento humano.</p>
+          </div>
+
+          <div class="sobre-item aparecer delay3">
+            <h3>🛠 Desenvolvimento acadêmico</h3>
+            <p>Construído com foco em lógica, usabilidade e boas práticas.</p>
+          </div>
+
+          <div class="sobre-item aparecer delay4">
+            <h3>🔐 Privacidade garantida</h3>
+            <p>Dados processados localmente, sem uso de servidores externos.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- COMO FUNCIONA -->
+      <section class="como-funciona aparecer">
+        <h2>Como funciona?</h2>
+        <div class="passos">
+          <div class="passo aparecer delay1">
+            <span>1</span>
+            <h3>Registro</h3>
+            <p>O usuário insere humor, produtividade e data.</p>
+          </div>
+
+          <div class="passo aparecer delay2">
+            <span>2</span>
+            <h3>Processamento</h3>
+            <p>A plataforma gera indicadores como Mood Score.</p>
+          </div>
+
+          <div class="passo aparecer delay3">
+            <span>3</span>
+            <h3>Análise</h3>
+            <p>Exibição de médias, tendências e comparativos.</p>
+          </div>
+
+          <div class="passo aparecer delay4">
+            <span>4</span>
+            <h3>Resultados</h3>
+            <p>Painéis e relatórios claros e intuitivos.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- PARCERIA -->
+      <section class="parceria aparecer">
+        <p>Projeto acadêmico — FIAP 2025</p>
+      </section>
+
+      <!-- FOOTER -->
+      <footer>
+        <p>&copy; 2025 WorkBalance+ — Uso acadêmico.</p>
+        <p class="nomes-rodape">
+          Gustavo Rodrigues Siciliano: RM568419 | Gustavo de Jesus Silva:
+          RM567926 | Samuel Keneti Kina de Lima: RM567614
+        </p>
+      </footer>
+    </main>
+
+    <!-- SCRIPT DO SITE -->
+    <script src="js/script.js"></script>
+
+    <!-- 🟦 BOT DO IBM WATSON (ADICIONADO AQUI — LOCAL IDEAL) -->
+    <script>
+      window.watsonAssistantChatOptions = {
+        integrationID: "c4604505-3b60-4d71-a15a-76c05218d6b8",
+        region: "us-south",
+        serviceInstanceID: "f27f254f-5677-496c-b2a1-928a7f79bf5a",
+        onLoad: async (instance) => {
+          await instance.render();
+        },
+      };
+
+      setTimeout(function () {
+        const t = document.createElement("script");
+        t.src =
+          "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" +
+          (window.watsonAssistantChatOptions.clientVersion || "latest") +
+          "/WatsonAssistantChatEntry.js";
+        document.head.appendChild(t);
+      });
+    </script>
+  </body>
+</html>
