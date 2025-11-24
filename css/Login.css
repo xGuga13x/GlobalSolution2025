@@ -1,0 +1,164 @@
+/* Paleta */
+:root {
+  --primaria: #3c6dff;
+  --primaria-escura: #2d4ad7;
+
+  --texto: #1a1a1a;
+  --texto-suave: #6c6c6c;
+
+  --fundo: #f4f6fa;
+  --fundo-branco: #ffffff;
+
+  --radius: 18px;
+  --sombra: 0 10px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Modo escuro automático */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fundo: #0e1117;
+    --fundo-branco: #11141c;
+    --texto: #f1f1f1;
+    --texto-suave: #b2b2b2;
+    --sombra: 0 10px 35px rgba(255, 255, 255, 0.05);
+  }
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--fundo);
+  color: var(--texto);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Container geral (SEM FUNDO PRETO) */
+.login-container {
+  width: 100%;
+  max-width: 450px;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Card */
+.login-card {
+  width: 100%;
+  padding: 40px 32px;
+  border-radius: var(--radius);
+  background: var(--fundo-branco);
+  box-shadow: var(--sombra);
+  text-align: center;
+  position: relative;
+}
+
+/* Glassmorphism */
+.glass {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+/* Fade */
+.fade {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Logo */
+.logo-area img {
+  width: 130px;
+  margin-bottom: 12px;
+}
+
+/* Títulos */
+h2 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--primaria-escura);
+}
+
+.sub {
+  color: var(--texto-suave);
+  margin-bottom: 22px;
+}
+
+/* Inputs */
+form label {
+  display: block;
+  text-align: left;
+  margin-top: 14px;
+  margin-bottom: 4px;
+  font-size: 0.9rem;
+}
+
+form input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #cfcfcf;
+  outline: none;
+  font-size: 1rem;
+  transition: 0.3s ease;
+}
+
+/* Neon Focus */
+form input:focus {
+  border-color: var(--primaria);
+  box-shadow: 0 0 10px rgba(60, 109, 255, 0.6), 0 0 20px rgba(60, 109, 255, 0.3);
+}
+
+/* Botão */
+.btn-login {
+  width: 100%;
+  padding: 14px;
+  margin-top: 22px;
+  background: var(--primaria);
+  border: none;
+  border-radius: 12px;
+  font-size: 1.15rem;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.btn-login:hover {
+  background: var(--primaria-escura);
+  transform: translateY(-2px);
+}
+
+/* Voltar */
+.voltar {
+  margin-top: 20px;
+}
+
+.voltar a {
+  text-decoration: none;
+  color: var(--primaria);
+  font-weight: 600;
+}
+
+.voltar a:hover {
+  color: var(--primaria-escura);
+}

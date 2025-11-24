@@ -1,0 +1,326 @@
+/* --------------------------------------------------
+   Paleta
+-------------------------------------------------- */
+:root {
+  --bg: #f4f6fa;
+  --bg-alt: #ffffff;
+  --text: #1a1a1a;
+  --muted: #5f6473;
+
+  --primary: #3c6dff;
+  --primary-dark: #2d4ad7;
+
+  --shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 10px 28px rgba(0, 0, 0, 0.12);
+  --radius: 16px;
+  --transition: 0.28s ease;
+}
+
+/* --------------------------------------------------
+   RESET
+-------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  animation: fadeIn 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* --------------------------------------------------
+   NAVBAR
+-------------------------------------------------- */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  z-index: 9999;
+  transition: background 0.35s ease, box-shadow 0.35s ease;
+}
+
+header.scrolled {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(14px);
+  box-shadow: var(--shadow);
+}
+
+.navbar {
+  max-width: 1280px;
+  margin: auto;
+  padding: 22px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+
+.menu a {
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--text);
+  position: relative;
+  padding-bottom: 3px;
+  transition: var(--transition);
+}
+
+.menu a:hover,
+.menu a.ativo {
+  color: var(--primary);
+}
+
+.menu a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  border-radius: 100px;
+  background: var(--primary);
+  transition: 0.3s ease;
+}
+
+.menu a:hover::after,
+.menu a.ativo::after {
+  width: 100%;
+}
+
+.login {
+  font-weight: 600;
+  color: var(--primary-dark);
+  transition: var(--transition);
+}
+
+.login:hover {
+  color: var(--primary);
+}
+
+/* --------------------------------------------------
+   FAQ
+-------------------------------------------------- */
+.conteudo {
+  padding-top: 140px;
+}
+
+.faq-topo {
+  text-align: center;
+  margin-bottom: 40px;
+  animation: slideUp 0.7s ease forwards;
+}
+
+.faq-topo h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.faq-lista {
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.faq-bloco {
+  background: #fff;
+  padding: 28px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  opacity: 0;
+  transform: translateY(25px);
+  animation: reveal 0.8s ease forwards;
+}
+
+.faq-bloco:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+@keyframes reveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.pergunta {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.resposta {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* --------------------------------------------------
+   CONTATO (Botão)
+-------------------------------------------------- */
+.contato {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.botao-contato {
+  cursor: pointer;
+  background: var(--primary);
+  padding: 14px 32px;
+  color: #fff;
+  border-radius: 14px;
+  font-weight: 600;
+  display: inline-block;
+  transform: translateY(0);
+  transition: var(--transition);
+}
+
+.botao-contato:hover {
+  background: var(--primary-dark);
+  transform: translateY(-3px);
+}
+
+/* --------------------------------------------------
+   MODAL DE CONTATO
+-------------------------------------------------- */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(4px);
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+  animation: fadeInModal 0.25s ease forwards;
+}
+
+@keyframes fadeInModal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal-conteudo {
+  background: var(--bg-alt);
+  padding: 32px;
+  width: 420px;
+  border-radius: 18px;
+  box-shadow: var(--shadow-hover);
+  animation: modalUp 0.32s ease forwards;
+}
+
+@keyframes modalUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.fechar {
+  float: right;
+  cursor: pointer;
+  font-size: 26px;
+  color: var(--muted);
+  transition: var(--transition);
+}
+
+.fechar:hover {
+  color: var(--primary);
+}
+
+/* Formulário */
+#form-contato {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+#form-contato input,
+#form-contato textarea {
+  width: 100%;
+  padding: 12px;
+  background: #f6f7fb;
+  border: 1px solid #dcdcdc;
+  border-radius: 12px;
+  transition: 0.25s ease;
+}
+
+#form-contato input:focus,
+#form-contato textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(60, 109, 255, 0.18);
+  outline: none;
+}
+
+.btn-enviar {
+  background: var(--primary);
+  color: white;
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.btn-enviar:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+/* --------------------------------------------------
+   FOOTER
+-------------------------------------------------- */
+footer {
+  background: var(--bg-alt);
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  padding: 40px 20px;
+  text-align: center;
+  color: var(--muted);
+  margin-top: 40px;
+}
+
+.nomes-rodape {
+  margin-top: 10px;
+  opacity: 0.75;
+}
