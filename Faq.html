@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>FAQ — WorkBalance+</title>
+
+    <link rel="stylesheet" href="css/Faq.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/responsividade.css" />
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <header>
+      <nav class="navbar">
+        <a href="Home.html" class="marca">
+          <img
+            src="assets/Logo_principal.png"
+            width="150"
+            alt="Logo WorkBalance+"
+          />
+        </a>
+
+        <ul class="menu">
+          <li><a href="Home.html">Início</a></li>
+          <li><a href="integrantes.html">Integrantes</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a class="ativo" href="faq.html">FAQ</a></li>
+        </ul>
+
+        <div class="acoes">
+          <a class="login" href="Login.html">Entrar</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- CONTEÚDO -->
+    <main class="conteudo">
+      <!-- TÍTULO -->
+      <section class="faq-topo aparecer">
+        <h1>Perguntas Frequentes</h1>
+        <p>Dúvidas rápidas sobre o WorkBalance+</p>
+      </section>
+
+      <!-- LISTA DE PERGUNTAS -->
+      <section class="faq-lista">
+        <div class="faq-bloco aparecer delay1">
+          <h2 class="pergunta">O que é o WorkBalance+?</h2>
+          <p class="resposta">
+            O WorkBalance+ é uma plataforma acadêmica desenvolvida para analisar
+            humor, produtividade e clima organizacional, voltada para estudos e
+            prototipagem.
+          </p>
+        </div>
+
+        <div class="faq-bloco aparecer delay2">
+          <h2 class="pergunta">O sistema armazena dados reais?</h2>
+          <p class="resposta">
+            Não. Todo o processamento é local e sem banco de dados externo —
+            ideal para fins educacionais.
+          </p>
+        </div>
+
+        <div class="faq-bloco aparecer delay3">
+          <h2 class="pergunta">Como o Mood Score é calculado?</h2>
+          <p class="resposta">
+            Ele é calculado pela média entre o humor diário e a produtividade
+            informada pelo usuário.
+          </p>
+        </div>
+
+        <div class="faq-bloco aparecer delay4">
+          <h2 class="pergunta">
+            O WorkBalance+ pode ser usado em empresas reais?
+          </h2>
+          <p class="resposta">
+            Sim. Com integração a banco de dados e autenticação, pode ser
+            facilmente adaptado para uso real.
+          </p>
+        </div>
+
+        <div class="faq-bloco aparecer delay4">
+          <h2 class="pergunta">O que o dashboard exibe?</h2>
+          <p class="resposta">
+            Ele mostra médias, comparativos, gráficos de comportamento e
+            tendências ao longo do tempo.
+          </p>
+        </div>
+      </section>
+
+      <!-- CONTATO -->
+      <section class="contato aparecer">
+        <h2>Ainda precisa de ajuda?</h2>
+        <p>Entre em contato diretamente com a equipe WorkBalance+</p>
+        <button
+          id="abrir-contato"
+          class="botao-contato"
+          onclick="window.location.href='mensagem.html'"
+        >
+          Enviar Mensagem
+        </button>
+      </section>
+    </main>
+
+    <!-- MODAL DE CONTATO -->
+    <div id="modal-contato" class="modal">
+      <div class="modal-conteudo">
+        <span class="fechar">&times;</span>
+
+        <h2>Fale com a gente</h2>
+        <p>Preencha os campos abaixo e enviaremos uma resposta em breve.</p>
+
+        <form
+          id="form-contato"
+          action="mailto:workbalance.fiap@gmail.com"
+          method="POST"
+          enctype="text/plain"
+        >
+          <label>Nome</label>
+          <input type="text" name="nome" required />
+
+          <label>E-mail</label>
+          <input type="email" name="email" required />
+
+          <label>Mensagem</label>
+          <textarea name="mensagem" required></textarea>
+
+          <button type="submit" class="btn-enviar">Enviar</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- RODAPÉ -->
+    <footer>
+      <p>&copy; 2025 WorkBalance+ — Uso acadêmico.</p>
+      <p class="nomes-rodape">
+        Gustavo Rodrigues Siciliano — RM568419 | Gustavo de Jesus Silva —
+        RM567926 | Samuel Keneti Kina de Lima — RM567614
+      </p>
+    </footer>
+
+    <script src="js/Script.js"></script>
+  </body>
+</html>
