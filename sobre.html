@@ -1,54 +1,226 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Sobre | Climax+</title>
-  <link rel="stylesheet" href="css/style.css" />
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Sobre | WorkBalance+</title>
+
+    <link rel="stylesheet" href="css/Sobre.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/responsividade.css" />
+  </head>
+
+  <body>
     <header>
-    <nav class="navbar">
-      <a href="index.html" class="brand">
-        <img src="assets/logo.png" alt="Logo Climax+" width="180" height="180">
-      </a>
+      <nav class="navbar">
+        <a href="Home.html" class="marca">
+          <img
+            src="assets/Logo_principal.png"
+            width="150"
+            alt="Logo WorkBalance+"
+          />
+        </a>
 
-      <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+        <ul class="menu">
+          <li><a href="Home.html">Início</a></li>
+          <li><a href="Integrantes.html">Integrantes</a></li>
+          <li><a class="ativo" href="Sobre.html">Sobre</a></li>
+          <li><a href="Faq.html">FAQ</a></li>
+        </ul>
 
-      <ul class="menu" id="menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="integrantes.html">Integrantes</a></li>
-        <li><a href="sobre.html" class="active">Sobre</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="dashboard.html">Dashboard</a></li>
-        <li><a href="contato.html">Contato</a></li>
-      </ul>
-    </nav> 
+        <div class="acoes">
+          <a class="login" href="Login.html">Entrar</a>
+        </div>
+      </nav>
     </header>
 
-  <main>
-    <section class="about">
-      <h1>Sobre o Climax+</h1>
+    <main>
+      <!-- HERO -->
+      <section class="hero-sobre aparecer">
+        <div class="overlay"></div>
+        <div class="hero-conteudo">
+          <h1>Sobre o WorkBalance+</h1>
+          <p>
+            Uma plataforma criada para transformar dados em bem-estar
+            organizacional.
+          </p>
+        </div>
+      </section>
 
-      <h2>O que é</h2>
-      <p>Climax+ é um protótipo desenvolvido em Python para registrar humor e produtividade de colaboradores e gerar análises simples para apoio ao RH.</p>
+      <!-- SEÇÃO 1 -->
+      <section class="secao visao aparecer">
+        <div class="texto">
+          <h2>Por que o WorkBalance+ existe?</h2>
+          <p>
+            O WorkBalance+ surgiu como uma proposta acadêmica com o objetivo de
+            analisar comportamento, produtividade e humor no ambiente
+            corporativo. Por meio de registros simples, é possível observar
+            padrões que ajudam a entender o clima organizacional.
+          </p>
+        </div>
 
-      <h2>Motivação</h2>
-      <p>A intenção é ajudar equipes e gestores a identificar queda de moral, perda de produtividade ou benefícios de intervenções ao longo do tempo.</p>
+        <div class="imagem">
+          <img src="assets/Equipe.jpg" alt="Equipe trabalhando" />
+        </div>
+      </section>
 
-      <h2>Como funciona (resumido)</h2>
-      <p>O usuário registra nome, data, humor (1-5) e produtividade (0-100). O sistema calcula um "Mood Score" e classifica níveis; gera relatório com médias e tendência.</p>
+      <!-- SEÇÃO 2 -->
+      <section class="como-funciona aparecer">
+        <h2>Como o sistema funciona?</h2>
 
-      <p>Para ver visualmente os resultados, acesse o <a href="dashboard.html">Dashboard</a>.</p>
-    </section>
-  </main>
+        <div class="grade-funcionamento">
+          <div class="item-funciona aparecer delay1">
+            <h3>📌 Registro diário</h3>
+            <p>O usuário insere humor, produtividade, data e observações.</p>
+          </div>
 
-  <footer> 
-    <p>&copy; 2025 Climax+ | Trabalho acadêmico. Todos os direitos reservados.</p>
-  </footer>
+          <div class="item-funciona aparecer delay2">
+            <h3>🧠 Processamento</h3>
+            <p>
+              O sistema calcula automaticamente indicadores, como o Mood Score,
+              e organiza os dados para análise.
+            </p>
+          </div>
 
-  <script src="js/script.js"></script>
-</body>
+          <div class="item-funciona aparecer delay3">
+            <h3>📊 Dashboard visual</h3>
+            <p>
+              Tendências, gráficos e comparativos facilitam a leitura do
+              comportamento ao longo do tempo.
+            </p>
+          </div>
+
+          <div class="item-funciona aparecer delay4">
+            <h3>📁 Relatórios</h3>
+            <p>
+              Geração de resumos que apoiam a tomada de decisão e estudos sobre
+              bem-estar.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEÇÃO 3 -->
+      <section class="pontos-chave aparecer">
+        <h2>Pontos-chave do WorkBalance+</h2>
+
+        <div class="grade-pontos">
+          <div class="card aparecer delay1">
+            <h3>✔ Focado no bem-estar</h3>
+            <p>
+              Prioriza o acompanhamento contínuo do estado emocional das
+              equipes.
+            </p>
+          </div>
+
+          <div class="card aparecer delay2">
+            <h3>✔ Baseado em dados</h3>
+            <p>
+              Utiliza indicadores, médias e tendências para apoiar decisões mais
+              conscientes.
+            </p>
+          </div>
+
+          <div class="card aparecer delay3">
+            <h3>✔ Uso acadêmico</h3>
+            <p>
+              Desenvolvido como protótipo educacional, permitindo experimentação
+              e melhorias futuras.
+            </p>
+          </div>
+
+          <div class="card aparecer delay4">
+            <h3>✔ Adaptável</h3>
+            <p>
+              Pode ser expandido e personalizado para diferentes contextos de
+              empresas e equipes.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- GALERIA — CARROSSEL -->
+      <section class="galeria aparecer">
+        <h2>Galeria & Destaques</h2>
+        <p>Veja imagens e vídeos relacionados ao WorkBalance+.</p>
+
+        <div class="carrossel">
+          <div class="slides">
+            <!-- IA -->
+            <div class="slide ativo">
+              <img src="assets/IA.png" alt="Conversa com IA sobre o projeto" />
+              <p class="legenda-slide">
+                Interações com IA para apoiar decisões e aprimorar o
+                desenvolvimento do WorkBalance+.
+              </p>
+            </div>
+
+            <!-- JAVA -->
+            <div class="slide">
+              <img src="assets/JAVA.png" alt="Protótipo em Java" />
+              <p class="legenda-slide">
+                Protótipo em Java utilizado para simular cálculos e regras de
+                negócio do sistema.
+              </p>
+            </div>
+
+            <!-- DER -->
+            <div class="slide">
+              <img src="assets/DER.png" alt="DER do projeto WorkBalance+" />
+              <p class="legenda-slide">
+                Modelo Entidade-Relacionamento (DER) representando a estrutura
+                de dados do WorkBalance+.
+              </p>
+            </div>
+
+            <!-- VÍDEO YOUTUBE -->
+            <div class="slide">
+              <a
+                href="https://youtu.be/5ruC8M4WKLk"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="https://img.youtube.com/vi/5ruC8M4WKLk/maxresdefault.jpg"
+                  alt="Vídeo de apresentação WorkBalance+ no YouTube"
+                />
+              </a>
+              <p class="legenda-slide">
+                Apresentação em vídeo do WorkBalance+ publicada no YouTube.
+              </p>
+            </div>
+
+            <!-- VÍDEO LOCAL -->
+            <div class="slide">
+              <video class="video-slide" controls preload="metadata">
+                <source src="assets/Vídeo - WorkBalance.mp4" type="video/mp4" />
+                Seu navegador não suporta vídeos HTML5.
+              </video>
+              <p class="legenda-slide">
+                Demonstração local do funcionamento do sistema WorkBalance+.
+              </p>
+            </div>
+          </div>
+
+          <button class="anterior">&#10094;</button>
+          <button class="proximo">&#10095;</button>
+
+          <div class="indicadores"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 WorkBalance+ — Uso acadêmico.</p>
+      <p class="footer-names">
+        Gustavo Rodrigues Siciliano: RM568419 | Gustavo de Jesus Silva: RM567926
+        | Samuel Keneti Kina de Lima: RM567614
+      </p>
+    </footer>
+
+    <script src="js/Script.js"></script>
+  </body>
 </html>
