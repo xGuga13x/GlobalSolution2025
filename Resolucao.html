@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resolução de Problemas — WorkBalance+</title>
+
+    <link rel="stylesheet" href="css/resolucao.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/responsividade.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <header>
+      <nav class="navbar">
+        <a href="index.html" class="marca">
+          <img
+            src="image/Logo_principal.png"
+            width="150"
+            alt="Logo WorkBalance+"
+          />
+        </a>
+
+        <ul class="menu">
+          <li><a href="Home.html">Início</a></li>
+          <li><a href="integrantes.html">Integrantes</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a class="ativo" href="resolucao.html">Resolução</a></li>
+        </ul>
+
+        <div class="acoes">
+          <a class="login" href="Login.html">Entrar</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- CONTEÚDO -->
+    <main class="conteudo">
+      <section class="topo">
+        <h1>Resolução de Problemas</h1>
+        <p>
+          Identificação automática de possíveis problemas e sugestões de
+          melhoria.
+        </p>
+      </section>
+
+      <!-- ALERTAS AUTOMÁTICOS -->
+      <section class="alertas">
+        <h2>Alertas Detectados</h2>
+
+        <div class="alerta-card aparecer">
+          <h3>⚠ Humor abaixo da média</h3>
+          <p>
+            O humor apresentou queda significativa nos últimos dias. Isso pode
+            indicar estresse, cansaço ou baixa motivação.
+          </p>
+        </div>
+
+        <div class="alerta-card aparecer delay1">
+          <h3>⚠ Produtividade irregular</h3>
+          <p>
+            A produtividade variou muito durante a semana, sugerindo falta de
+            foco ou sobrecarga.
+          </p>
+        </div>
+
+        <div class="alerta-card aparecer delay2">
+          <h3>⚠ Mood Score instável</h3>
+          <p>
+            Oscilações intensas no Mood Score podem indicar conflitos internos
+            ou problemas de rotina.
+          </p>
+        </div>
+      </section>
+
+      <!-- RECOMENDAÇÕES -->
+      <section class="recomendacoes">
+        <h2>Recomendações Inteligentes</h2>
+
+        <div class="lista-recomendacoes">
+          <div class="reco aparecer">
+            <h3>🧘 Pausas programadas</h3>
+            <p>Faça pausas curtas a cada 50 minutos para reduzir o estresse.</p>
+          </div>
+
+          <div class="reco aparecer delay1">
+            <h3>📌 Organização</h3>
+            <p>
+              Liste tarefas do dia e conclua uma por vez para evitar sobrecarga.
+            </p>
+          </div>
+
+          <div class="reco aparecer delay2">
+            <h3>🤝 Feedback interno</h3>
+            <p>Converse com colegas para identificar dificuldades coletivas.</p>
+          </div>
+
+          <div class="reco aparecer delay3">
+            <h3>💤 Higiene mental</h3>
+            <p>Durma bem e mantenha uma rotina equilibrada.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- GRÁFICO -->
+      <section class="grafico">
+        <h2>Tendência de problemas</h2>
+        <canvas id="graficoProblemas"></canvas>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>&copy; 2025 WorkBalance+ — Uso acadêmico.</p>
+      <p class="footer-names">
+        Gustavo Rodrigues Siciliano: RM568419 | Gustavo de Jesus Silva: RM567926
+        | Samuel Keneti Kina de Lima: RM567614
+      </p>
+    </footer>
+
+    <script src="Js/Script.js"></script>
+  </body>
+</html>

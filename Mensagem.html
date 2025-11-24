@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contato — WorkBalance+</title>
+
+    <link rel="stylesheet" href="css/Mensagem.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/responsividade.css" />
+  </head>
+
+  <body>
+    <div class="contato-container">
+      <div class="contato-card fade">
+        <h2>Entre em Contato</h2>
+        <p class="sub">Como podemos ajudar você?</p>
+
+        <form id="formContato">
+          <label>Nome completo</label>
+          <input
+            type="text"
+            id="nome"
+            required
+            placeholder="Digite seu nome completo"
+          />
+
+          <label>E-mail</label>
+          <input
+            type="email"
+            id="email"
+            required
+            placeholder="Digite seu e-mail"
+          />
+
+          <label>Assunto</label>
+          <input
+            type="text"
+            id="assunto"
+            required
+            placeholder="Sobre o que deseja falar?"
+          />
+
+          <label>Mensagem</label>
+          <textarea
+            id="mensagem"
+            rows="5"
+            required
+            placeholder="Explique seu problema ou dúvida"
+          ></textarea>
+
+          <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+        </form>
+
+        <div class="voltar">
+          <a href="faq.html">← Voltar ao FAQ</a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Enviar e redirecionar para Home após simulação
+      const form = document.getElementById("formContato");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        alert("Mensagem enviada com sucesso! Nossa equipe retornará em breve.");
+        window.location.href = "Home.html";
+      });
+    </script>
+  </body>
+</html>

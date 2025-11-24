@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard — WorkBalance+</title>
+
+    <link rel="stylesheet" href="css/Dashboard.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/responsividade.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar">
+        <a href="index.html" class="marca">
+          <img
+            src="assets/Logo_principal.png"
+            width="150"
+            alt="Logo WorkBalance+"
+          />
+        </a>
+
+        <ul class="menu">
+          <li><a href="Home.html">Início</a></li>
+          <li><a href="integrantes.html">Integrantes</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a class="ativo" href="dashboard.html">Dashboard</a></li>
+          <li><a href="resolucao.html">Resolução</a></li>
+        </ul>
+
+        <div class="acoes">
+          <a class="login" href="#">Entrar</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="conteudo-dashboard">
+      <section class="topo">
+        <h1>Dashboard Analítico</h1>
+        <p>Análise visual sobre humor, produtividade e Mood Score.</p>
+      </section>
+
+      <!-- CARDS RESUMO -->
+      <section class="cards">
+        <div class="card">
+          <h3>Humor Médio</h3>
+          <p id="humorMedia">—</p>
+        </div>
+
+        <div class="card">
+          <h3>Produtividade Média</h3>
+          <p id="prodMedia">—</p>
+        </div>
+
+        <div class="card">
+          <h3>Mood Score Médio</h3>
+          <p id="moodScoreMedia">—</p>
+        </div>
+      </section>
+
+      <!-- GRÁFICOS -->
+      <section class="graficos">
+        <div class="grafico-card">
+          <h3>Humor ao longo do tempo</h3>
+          <canvas id="graficoHumor"></canvas>
+        </div>
+
+        <div class="grafico-card">
+          <h3>Produtividade ao longo do tempo</h3>
+          <canvas id="graficoProd"></canvas>
+        </div>
+
+        <div class="grafico-card">
+          <h3>Mood Score diário</h3>
+          <canvas id="graficoMood"></canvas>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 WorkBalance+ — Uso acadêmico.</p>
+      <p class="nomes-rodape">
+        Gustavo Rodrigues Siciliano: RM568419 | Gustavo de Jesus Silva: RM567926
+        | Samuel Keneti Kina de Lima: RM567614
+      </p>
+    </footer>
+
+    <script src="Js/Script.js"></script>
+  </body>
+</html>
